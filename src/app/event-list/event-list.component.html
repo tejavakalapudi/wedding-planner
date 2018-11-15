@@ -1,0 +1,17 @@
+<div>
+  <form class="form-inline mb-2 justify-content-between">
+    <input 
+      type="text" 
+      class="form-control" 
+      id="eventName" 
+      aria-describedby="eventName" 
+      placeholder="Enter Event Name" 
+      [(ngModel)]="event_name" 
+      name="event"
+    >
+    <button type="submit" class="btn btn-primary" (click)="onEventAdd()">Add</button>
+  </form>
+  <ul class="list-group">
+    <event-item *ngFor="let event of events" [event]="event"></event-item>
+  </ul>
+</div>
