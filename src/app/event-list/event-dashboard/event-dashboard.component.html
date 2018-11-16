@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-6">
+    <form class="form-inline mb-2 justify-content-between">
+      <input 
+        type="text" 
+        class="form-control" 
+        id="itemName" 
+        aria-describedby="itemName" 
+        placeholder="What to do?" 
+        [(ngModel)]="item_name" 
+        name="item"
+      >
+      <button type="submit" class="btn btn-primary" (click)="onItemAdd()">Add</button>
+    </form>
+    <ul>
+      <li 
+        *ngFor="let item of toDoList" 
+        class="list-group-item mb-1 font-weight-bold text-secondary"
+      >
+        {{item}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-6">
+  </div>
+</div>

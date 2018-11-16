@@ -16,6 +16,7 @@ export class EventListComponent implements OnInit {
   ];
 
   event_name: string;
+  active_toDo_list: any[] = [];
 
   constructor() { }
 
@@ -25,6 +26,10 @@ export class EventListComponent implements OnInit {
   onEventAdd(){
     this.event_name && this.events.push( this.event_name );
     this.event_name = "";
+  }
+
+  setToDoList(list){
+    this.active_toDo_list = [ ...this.active_toDo_list, ...list ];
   }
 
 }
